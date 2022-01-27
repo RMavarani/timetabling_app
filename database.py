@@ -14,14 +14,12 @@ class table(Base):
         Name= Column(String(100), nullable=False)
         Surname= Column(String(100), nullable=False)
         JobTitle= Column(String(500), nullable=False)
-
-        _
         
         __tablename__='Userstation'
         Id = Column(Integer, primary_key=True)
         station= Column(Integer,unique=True,nullable=False)
-        Training= Column(Integer, nullable=False)
-        absent= Column()
+        Training= Column(Boolean, nullable=False)
+        absent= Column(Boolean, default=False)
 
         __tablename__='LinkTable'
         Id = Column(Integer, primary_key=True)
