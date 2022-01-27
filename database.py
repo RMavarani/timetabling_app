@@ -15,13 +15,15 @@ class table(Base):
         Surname= Column(String(100), nullable=False)
         JobTitle= Column(String(500), nullable=False)
 
-
+        _
+        
         __tablename__='Userstation'
         Id = Column(Integer, primary_key=True)
-        station= Column(String(50), nullable=False)
+        station= Column(Integer,unique=True,nullable=False)
+        Training= Column(Integer, nullable=False)
+        absent= Column()
 
-
-        __tablename__='Userskills'
+        __tablename__='LinkTable'
         Id = Column(Integer, primary_key=True)
         user= relationship('User')
         station= relationship('Userstation')
