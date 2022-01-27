@@ -8,11 +8,11 @@ def index():
     
     return render_template("Base.html")
 
-@app.route('/sign_in')
+@app.route('/SignIn')
 def sign_in ():
         return  render_template("SignIn.html")
 
-@app.route('/sign_up')
+@app.route('/SignUp')
 def sign_up ():
         return render_template("SignUp.html")
 if __name__ == '__main__':
