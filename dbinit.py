@@ -8,7 +8,7 @@ from flask_login import login_user, login_required, logout_user, current_user
 Base= declarative_base()
 engine = create_engine('sqlite:///data.db', echo = True)
 
-class table(Base):
+class inter(Base):
         __tablename__='User'
         Id = Column(Integer, primary_key=True, autoincrement=True)
         Username = Column(String(100),unique=True,nullable=False)
